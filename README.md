@@ -1,61 +1,61 @@
 # OpenShop Django
 
-[![Python Version](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-310/)
+[![Python Version](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/)
 [![Django Version](https://img.shields.io/badge/django-REST-green.svg)](https://www.djangoproject.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-OpenShop Django adalah layanan RESTful API backend e-commerce yang dibangun menggunakan Django. Proyek ini berfokus pada manajemen produk serta penerapan prinsip HATEOAS (Hypermedia As The Engine Of Application State) untuk memastikan navigasi API yang dinamis dan terstandarisasi.
+OpenShop Django is an e-commerce backend RESTful API service built using Django. The project focuses on product management and the implementation of HATEOAS (Hypermedia As The Engine Of Application State) principles to ensure dynamic and standardized API navigation.
 
 ---
 
-## Daftar Isi
+## Table of Contents
 
-* [Tentang Proyek](#tentang-proyek)
-* [Fitur Utama](#fitur-utama)
+* [About the Project](#about-the-project)
+* [Key Features](#key-features)
 * [Tech Stack](#tech-stack)
-* [Struktur Direktori](#struktur-direktori)
-* [Persiapan Instalasi](#persiapan-instalasi)
-* [Menjalankan Aplikasi](#menjalankan-aplikasi)
-* [Dokumentasi API dan Pengujian](#dokumentasi-api-dan-pengujian)
-* [Kontribusi](#kontribusi)
-* [Lisensi](#lisensi)
+* [Directory Structure](#directory-structure)
+* [Installation Guide](#installation-guide)
+* [Running the Application](#running-the-application)
+* [API Documentation and Testing](#api-documentation-and-testing)
+* [Contributing](#contributing)
+* [License](#license)
 
 ---
 
-## Tentang Proyek
+## About the Project
 
-Layanan ini dirancang untuk menyediakan fondasi backend e-commerce yang bersih dan modular. Dengan mengimplementasikan pendekatan HATEOAS, klien yang mengonsumsi API ini dapat menavigasi resource terkait secara dinamis melalui tautan hypermedia yang disertakan langsung di dalam respons payload, mengurangi ketergantungan klien pada hardcode URL endpoint.
+This service is designed to provide a clean and modular e-commerce backend foundation. By implementing the HATEOAS approach, clients consuming this API can dynamically navigate related resources through hypermedia links included directly within the response payload, reducing client dependency on hardcoded endpoint URLs.
 
 ---
 
-## Fitur Utama
+## Key Features
 
-* **Manajemen Produk**: Operasi dasar CRUD (Create, Read, Update, Delete) untuk pengelolaan data produk e-commerce.
-* **Dukungan HATEOAS**: Setiap respons API menyertakan tautan relasional agar klien dapat mengetahui aksi selanjutnya yang tersedia.
-* **Koleksi Pengujian API**: Menyediakan file konfigurasi lingkungan dan koleksi pengujian siap pakai untuk mempermudah validasi endpoint.
+* **Product Management**: Basic CRUD (Create, Read, Update, Delete) operations for managing e-commerce product data.
+* **HATEOAS Support**: Every API response includes relational links so clients can discover available subsequent actions dynamically.
+* **API Testing Collection**: Provides environment configuration files and ready-to-use test collections to simplify endpoint validation.
 
 ---
 
 ## Tech Stack
 
-* **Bahasa Pemrograman**: Python 3.10
+* **Programming Language**: Python 3.10
 * **Framework**: Django
-* **Database**: SQLite (Default untuk pengembangan lokal)
-* **Manajemen Dependensi**: Pipenv / Pip
+* **Database**: SQLite (Default for local development)
+* **Dependency Management**: Pipenv / Pip
 
 ---
 
-## Struktur Direktori
+## Directory Structure
 
-Struktur direktori proyek disusun sebagai berikut:
+The project directory structure is organized as follows:
 
 ```text
 openshop-django/
-├── openshop/                              # Konfigurasi dan pengaturan utama proyek Django
-├── products/                              # Aplikasi inti untuk manajemen produk dan endpoint HATEOAS
-├── OpenShopAPITestCollectionAndEnvironment/ # Koleksi pengujian API dan environment
-├── Pipfile                                # Definisi dependensi menggunakan Pipenv
-├── Pipfile.lock                           # Lockfile dependensi Pipenv
-├── requirements.txt                       # Daftar dependensi flat
-├── db.sqlite3                             # Database SQLite pengembangan
-└── manage.py                              # Utilitas command-line Django
+├── openshop/                              # Main Django project configuration and settings
+├── products/                              # Core application for product management and HATEOAS endpoints
+├── OpenShopAPITestCollectionAndEnvironment/ # API test collections and environment configurations
+├── Pipfile                                # Dependency definitions using Pipenv
+├── Pipfile.lock                           # Pipenv dependency lockfile
+├── requirements.txt                       # Flat dependency list
+├── db.sqlite3                             # Development SQLite database
+└── manage.py                              # Django command-line utility
